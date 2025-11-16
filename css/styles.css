@@ -1,0 +1,484 @@
+@font-face {
+    font-family: 'bookhand';
+    src: url(/fonts/elementary_gothic_bookhand/Elementary_Gothic_Bookhand.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'burton';
+    src: url(/fonts/burtons_nightmare/NITEMARE.TTF) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+  body {
+    margin: 0;
+    background-color: #0e0606;
+    cursor: url("/img/creepy-eyes-custom-cursor.png") 16 16, auto;
+  }
+
+nav {
+  background-color: #0800008c;
+  box-shadow: 0 0 50px rgba(153, 17, 17, 0.442), 0 0 60px rgba(107, 2, 2, 0.238);
+  padding: 10px 20px;
+  height: 80px;
+  position: relative;
+  z-index: 1000; 
+} 
+
+nav a, .dropdown a, .dropdown-sub a, .dropdown-content a, .dropdown-sub-content a, a:hover{
+  cursor: url("/img/creepy-eyes-custom-cursor-ticika.png") 16 16, pointer;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.logo img {
+  height: 350px; 
+  width: auto;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navigation > a,
+.dropdown > a {
+  color: #955959;
+  text-decoration: none;
+  padding: 14px 16px;
+  display: block;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #0e0606;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  border-radius: 5%;
+  z-index: 10;
+  flex-direction: column;
+}
+
+.dropdown-content a {
+  color: #955959;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-sub {
+  position: relative;
+}
+
+.dropdown-sub-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #0e0606;
+  border-radius: 5%;
+  min-width: 180px;
+  z-index: 20;
+  flex-direction: column;
+}
+
+.dropdown-sub-content a {
+  padding: 10px 15px;
+}
+
+.dropdown-sub > a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown-sub:hover .dropdown-sub-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+.dropdown > a i,
+.dropdown-sub > a i {
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover > a i {
+  transform: rotate(90deg);
+}
+
+.dropdown-sub:hover > a i {
+  transform: rotate(90deg);
+}
+
+.login-btn button {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: none;
+  border-radius: 5%;
+  color: #955959;
+  cursor: pointer;
+  font-size: 10px;
+  font-family: 'bookhand', sans-serif;
+  transition: background-color 0.2s ease;
+}
+
+.login-btn button:hover {
+  color:#7d3030;
+  transform:translateY(-2px);
+  transition: transform 0.3s ease;
+  cursor: url("/img/creepy-eyes-custom-cursor-ticika.png") 16 16, pointer;
+}
+
+.dropdown > a,
+.navigation > a {
+  font-family: 'bookhand', sans-serif;
+}
+
+.dropdown-sub > a,
+.dropdown-content a,
+.dropdown-sub-content a {
+  font-family: 'burton', sans-serif;
+  font-size: 20px;
+}
+
+.dropdown-content,
+.dropdown-sub-content {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none; 
+}
+
+.dropdown:hover > a i,
+.dropdown-sub:hover > a i {
+  transform: rotate(90deg);
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown-sub:hover .dropdown-sub-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  box-shadow: 0 8px 25px rgba(255,0,0,0.4); 
+}
+
+
+.vinyl-section {
+  overflow-x:scroll;
+  white-space: nowrap;
+  padding: 20px 60px; 
+  background: #0e0606;
+  
+}
+
+[class$='-title']{
+  display: flex;
+  font-size: 25px;
+  justify-self: center;
+  position:relative;
+  font-family:'bookhand', sans-serif;
+  font-weight: lighter;
+  color:#955959;
+  text-shadow: 0 0 50px rgb(114, 44, 44), 0 0 70px rgb(153, 96, 96);
+} 
+
+.slider-track {
+  display: flex;
+  gap: 300px;
+}
+
+.vinyl-card {
+  display: inline-block;
+  width: 300px; 
+  text-align: center;
+  cursor: pointer;
+  margin-right: 20px;
+  border-radius: 5%;
+  transition: transform 0.3s ease;
+}
+
+.vinyl-card:hover {
+  transform: translateY(-15px); 
+  box-shadow: 0 0 20px rgb(114, 44, 44), 0 0 40px #600;
+  background-color: #0e0606;
+  cursor: url("/img/creepy-eyes-custom-cursor-ticika.png") 16 16, pointer;
+}
+
+.vinyl-img {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.vinyl-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px; 
+  transition: opacity 0.5s ease;
+  display: block; 
+}
+
+.vinyl-img .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.vinyl-card:hover .vinyl-img .back {
+  opacity: 1;
+}
+
+.vinyl-card:hover .vinyl-img .front {
+  opacity: 0;
+}
+
+.album-name {
+  font-family: 'burton', sans-serif;
+  font-size: 22px; 
+  margin: 15px 0 0 0;
+  color: #f3f3f3;
+}
+
+.artist-name {
+  font-size: 18px; 
+  color: #c7a9a9;
+  margin: 6px 0;
+}
+
+.price {
+  font-size: 18px; 
+  color: rgb(124, 23, 23);
+  text-shadow: 0 0 12px rgba(255, 0, 0, 0.427), 0 0 35px rgba(173, 59, 59, 0.647);
+  margin-top: 6px;
+}
+
+
+.vinyl-section::-webkit-scrollbar {
+  height: 15px;
+}
+
+.vinyl-section::-webkit-scrollbar-track {
+  background: none;
+  border-radius: 6px;
+}
+
+.vinyl-section::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #470b0b, #430202); 
+  border-radius: 6px;
+  box-shadow: 0 0 10px #520303, 0 0 20px #5e090986;
+}
+
+.vinyl-section::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #3e0202, #620505); 
+  box-shadow: 0 0 10px #520303, 0 0 20px #5e090986;
+}
+
+
+.vinyl-section {
+  scroll-behavior: smooth;
+}
+
+
+.vinyl-section.dragging {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+
+main .merch-clothes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px 110px 90px;
+  justify-content: center;
+  background: #0e0606;
+  gap: 40px;
+}
+
+.merch-card {
+  display: inline-block;
+  width: 300px; 
+  text-align: center;
+  cursor: pointer;
+  margin-right: 20px;
+  border-radius: 5%;
+  transition: transform 0.3s ease;
+}
+
+.merch-card:hover {
+  transform: translateY(-15px); 
+  box-shadow: 0 0 20px rgb(114, 44, 44), 0 0 40px #600;
+  background-color: #0e0606;
+  cursor: url("/img/creepy-eyes-custom-cursor-ticika.png") 16 16, pointer;
+}
+
+.merch-img {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.merch-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px; 
+  transition: opacity 0.5s ease;
+  display: block; 
+}
+
+.merch-img .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.merch-card:hover .merch-img .back {
+  opacity: 1;
+}
+
+.merch-card:hover .merch-img .front {
+  opacity: 0;
+}
+
+.cloth-name {
+  font-family: 'burton', sans-serif;
+  font-size: 22px; 
+  margin: 15px 0 0 0;
+  color: #f3f3f3;
+}
+
+.price {
+  font-size: 18px; 
+  color: rgb(124, 23, 23);
+  text-shadow: 0 0 12px rgba(255, 0, 0, 0.427), 0 0 35px rgba(173, 59, 59, 0.647);
+  margin-top: 6px;
+}
+
+body::-webkit-scrollbar {
+  height: 2px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #111;
+  border-radius: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #470b0b, #430202); 
+  border-radius: 6px;
+  box-shadow: 0 0 10px #520303, 0 0 20px #5e090986;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #5d1414, #620505); 
+  box-shadow: 0 0 10px #520303, 0 0 20px #5e090986;
+}
+
+body {
+  scroll-behavior: smooth;
+} 
+
+body.dragging {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  color: #c7a9a9;
+  background-color: #0800008c;
+  font-family: 'burton', sans-serif;
+}
+
+.feedback{
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  padding: 20px 50px 20px;
+  border-radius: 5px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.feedback input{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px 5px 15px;
+  margin: 10px 100px 10px;
+  color: lightcoral;
+  max-width: 200px;
+  text-align: center;
+  background-color: rgb(43, 8, 8);
+  border: none;
+  font-family: 'bookhand', sans-serif;
+  cursor: pointer;
+  cursor: url("/img/creepy-eyes-custom-cursor-ticika.png") 16 16, pointer;
+
+}
+
+.feedback input:focus{
+    border: solid 1px;
+    border-color: #e50914;
+    background: #330202;
+    outline: none;
+}
+
+.feedback input[type='submit']:hover {
+  color:rgb(134, 68, 68);
+  background-color: #470b0b;
+  cursor: url("/img/creepy-eyes-custom-cursor-ticika.png") 16 16, pointer;
+}
+
+.footer-text, .merchandising-title, .section-title{
+animation: flicker-static 1.5s infinite alternate;
+}
+@keyframes flicker-static{
+  from{
+   text-shadow: 0 0 50px rgb(172, 78, 78), 0 0 70px rgb(215, 89, 89);
+   color:#cb6b6b
+  }
+  to {
+    text-shadow: 0 0 50px rgb(133, 37, 37), 0 0 70px rgb(154, 83, 83);
+    color:#814444;
+  }
+}
+
+ nav a:hover{
+  transform:translateY(-2px);
+  transition: transform 0.3s ease;
+  animation: flicker-hover 1.5s infinite alternate;
+}
+@keyframes flicker-hover {
+    from{
+   text-shadow: 0 0 50px rgb(172, 78, 78), 0 0 70px rgb(215, 89, 89);
+   color:#cb6b6b
+  }
+  to {
+    text-shadow: 0 0 50px rgb(133, 37, 37), 0 0 70px rgb(154, 83, 83);
+    color:#814444;
+  }
+}
+
