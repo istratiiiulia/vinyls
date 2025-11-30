@@ -33,7 +33,7 @@
   }
 
 nav {
-  background-color: #0800008c;
+  background-color: #0000008c;
   box-shadow: 0 0 50px rgba(153, 17, 17, 0.442), 0 0 60px rgba(107, 2, 2, 0.238);
   padding: 10px 20px;
   height: 80px;
@@ -211,224 +211,212 @@ nav a:hover{
   }
 }
 
-.vinyl-section {
-  overflow-x:scroll;
-  white-space: nowrap;
-  padding: 20px 60px; 
-}
-
-[class$='-title']{
-  display: flex;
-  font-size: 25px;
-  justify-self: center;
-  position:relative;
-  font-family:'bookhand', sans-serif;
-  font-weight: lighter;
-  color:#955959;
-  text-shadow: 0 0 50px rgb(114, 44, 44), 0 0 70px rgb(153, 96, 96);
-} 
-
-.slider-track {
-  display: flex;
-  gap: 300px;
-}
-
-.vinyl-card {
-  display: inline-block;
-  width: 300px; 
-  text-align: center;
-  cursor: pointer;
-  margin-right: 20px;
-  border-radius: 5%;
-  transition: transform 0.3s ease;
-}
-
-.vinyl-card:hover {
-  transform: translateY(-15px); 
-  box-shadow: 0 0 20px rgb(114, 44, 44), 0 0 40px #600;
-  background-color: #0e0606;
-  cursor: url("/img/creepy-eyes-custom-cursor-ticika.png") 16 16, pointer;
-}
-
-.vinyl-img {
-  position: relative;
-  width: 300px;
-  height: 300px;
-}
-
-.vinyl-img img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px; 
-  transition: opacity 0.5s ease;
-  display: block; 
-}
-
-.vinyl-img .back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-
-.vinyl-card:hover .vinyl-img .back {
-  opacity: 1;
-}
-
-.vinyl-card:hover .vinyl-img .front {
-  opacity: 0;
-}
-
-.album-name {
-  font-family: 'dark', sans-serif;
-  font-size: 22px; 
-  margin: 15px 0 0 0;
-  color: #f3f3f3;
-}
-
-.artist-name {
-  font-size: 18px; 
-  color: #c7a9a9;
-  margin: 6px 0;
-}
-
-.price {
-  font-size: 18px; 
-  color: rgb(124, 23, 23);
-  text-shadow: 0 0 12px rgba(255, 0, 0, 0.427), 0 0 35px rgba(173, 59, 59, 0.647);
-  margin-top: 6px;
-}
-
-
-.vinyl-section::-webkit-scrollbar {
-  height: 15px;
-}
-
-.vinyl-section::-webkit-scrollbar-track {
-  background: none;
-  border-radius: 6px;
-}
-
-.vinyl-section::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg, #470b0b, #430202); 
-  border-radius: 6px;
-  box-shadow: 0 0 10px #520303, 0 0 20px #5e090986;
-}
-
-.vinyl-section::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(90deg, #3e0202, #620505); 
-  box-shadow: 0 0 10px #520303, 0 0 20px #5e090986;
-}
-
-
-.vinyl-section {
-  scroll-behavior: smooth;
-}
-
-
-.vinyl-section.dragging {
-  cursor: grabbing;
-  cursor: -webkit-grabbing;
-}
-
-
-main .merch-clothes {
+.product-inner {
+  max-width: 1300px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 20px 110px 90px;
-  justify-content: center;
-  gap: 40px;
+  grid-template-columns: 520px 1fr;
+  gap: 50px;
+  align-items: start;
 }
 
-.merch-card {
-  display: inline-block;
-  width: 300px; 
-  text-align: center;
-  cursor: pointer;
-  margin-right: 20px;
-  border-radius: 5%;
-  transition: transform 0.3s ease;
+.product-media {
+  position: sticky;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.merch-card:hover {
-  transform: translateY(-15px); 
-  box-shadow: 0 0 20px rgb(114, 44, 44), 0 0 40px #600;
-  background-color: #2000009f;
-  cursor: url("/img/creepy-eyes-custom-cursor-ticika.png") 16 16, pointer;
-}
-
-.merch-img {
-  position: relative;
-  width: 300px;
-  height: 300px;
-}
-
-.merch-img img {
+.album-art {
   width: 100%;
-  height: 100%;
-  border-radius: 10px; 
-  transition: opacity 0.5s ease;
-  display: block; 
+  border-radius: 12px;
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.8),
+    0 0 60px rgba(160,20,20,0.18);
 }
 
-.merch-img .back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
+.format-thumbs {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
 }
 
-.merch-card:hover .merch-img .back {
-  opacity: 1;
+.product-page {
+    color: #e6e6e6;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
 }
 
-.merch-card:hover .merch-img .front {
-  opacity: 0;
+.container {
+    width: 90%;
+    max-width: 1250px;
+    margin: 0 auto;
 }
 
-.cloth-name {
-  font-family: 'dark', sans-serif;
-  font-size: 22px; 
-  margin: 15px 0 0 0;
-  color: #f3f3f3;
+.product-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.product-media {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.album-art {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(180, 0, 0, 0.45), 0 0 60px rgba(120, 0, 0, 0.25);
+    object-fit: cover;
+}
+
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.artist {
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-family: 'halloween', sans-serif;
+    color: #9d4141;
+}
+
+.title {
+    font-size: 40px;
+    margin: 0;
+    color: #ffffff;
+    font-family: 'halloween', sans-serif;
+}
+
+.format {
+    padding: 20px;
+    border: 1px solid #3a0f0f;
+    background-color: #27000081;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'halloween', sans-serif;
+}
+
+.format-name {
+    font-size: 18px;
 }
 
 .price {
-  font-size: 18px; 
-  color: rgb(124, 23, 23);
-  text-shadow: 0 0 12px rgba(255, 0, 0, 0.427), 0 0 35px rgba(173, 59, 59, 0.647);
-  margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
 }
 
-body::-webkit-scrollbar {
-  height: 2px;
+.price-old {
+    text-decoration: line-through;
+    color: #888;
+    font-family: 'dark', sans-serif;
 }
 
-body::-webkit-scrollbar-track {
-  background: #111;
-  border-radius: 6px;
+.price-current {
+    font-family: 'dark', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
 }
 
-body::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg, #470b0b, #430202); 
-  border-radius: 6px;
-  box-shadow: 0 0 10px #520303, 0 0 20px #5e090986;
+.add-cart {
+    margin-top: 8px;
+    padding: 10px 18px;
+    font-size: 15px;
+    border: none;
+    background-color: #760000;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-family: 'dark', sans-serif;
+    cursor: url("/img/creepy-eyes-custom-cursor-ticika.png") 16 16, pointer;
 }
 
-body::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(90deg, #5d1414, #620505); 
-  box-shadow: 0 0 10px #520303, 0 0 20px #5e090986;
+.add-cart:hover {
+    background-color: #844747;
+    box-shadow: rgb(192, 139, 137) 0 0 12px;
+    transform: translateY(3px);
 }
 
-body {
-  scroll-behavior: smooth;
-} 
-
-body.dragging {
-  cursor: grabbing;
-  cursor: -webkit-grabbing;
+.product-details{
+    background-color: #2b070777;
+    border-radius: 5%;
+    border: solid 1px #3c0f0f;
+    box-shadow: 0 0 15px rgba(112, 0, 0, 0.336);
 }
 
+.product-details h2 {
+    margin-left:15px;
+    margin-bottom: 10px;
+    font-size: 26px;
+    color: #860000;
+    font-family: 'halloween', sans-serif;
+}
+
+.product-details p {
+    text-indent: 10px;
+    padding: 15px 20px 15px;
+    line-height: 1.6;
+    color: #d9d9d9;
+    background-color: #1a0f0f6b;
+    font-family: 'dark', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.delivery-box {
+    padding: 20px;
+    background-color: #1a0f0f6b;
+    box-shadow: 0 0 15px rgba(112, 0, 0, 0.336);
+    border-radius: 10px;
+  }
+  
+  .delivery-box h3 {
+    font-family: 'halloween', sans-serif;
+    margin-bottom: 10px;
+    color: #850000;
+}
+
+.delivery-box ul li {
+    margin-bottom: 6px;
+    color: #ececec;
+    font-family: 'dark', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 900px) {
+    .product-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-media {
+        justify-content: center;
+    }
+
+    .album-art {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 900px) {
+  .product-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .album-art {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
 
 .site-footer {
     background: linear-gradient(180deg, #150404, #2b0707, #150404);
@@ -514,4 +502,3 @@ body.dragging {
     color: #c9a3a3;
     letter-spacing: 0.5px;
 }
-

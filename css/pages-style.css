@@ -6,42 +6,54 @@
 }
 
 @font-face {
-    font-family: 'burton';
-    src: url(/fonts/burtons_nightmare/NITEMARE.TTF) format('truetype');
+    font-family: 'octobercrow';
+    src: url(/fonts/Octobercrow.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-  body {
-    overflow-x: hidden;
+@font-face {
+    font-family: 'halloween';
+    src: url(/fonts/hallowen/HallowenInline.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dark';
+    src: url(/fonts/DarkShadowSkyrimFont.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
     margin: 0;
-    background-color: #170a0a;
-    color: #fff;
+    background-image: url("/img/bg.jpg");
+    background-repeat: no-repeat;
     cursor: url("/img/creepy-eyes-custom-cursor.png") 16 16, auto;
   }
 
 body::-webkit-scrollbar {
-  width: 10px;
+  height: 2px;
 }
 
 body::-webkit-scrollbar-track {
-  background: #270b0b;
-  border-radius: 5px;
+  background: #111;
+  border-radius: 6px;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #2a0808cd; 
-  border-radius: 5px;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #5d1414, #620505);
+  background: linear-gradient(90deg, #470b0b, #430202); 
+  border-radius: 6px;
   box-shadow: 0 0 10px #520303, 0 0 20px #5e090986;
 }
 
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #5d1414, #620505); 
+  box-shadow: 0 0 10px #520303, 0 0 20px #5e090986;
+}
 
 nav {
-  max-width: 100%;
   background-color: #0800008c;
   box-shadow: 0 0 50px rgba(153, 17, 17, 0.442), 0 0 60px rgba(107, 2, 2, 0.238);
   padding: 10px 20px;
@@ -50,7 +62,7 @@ nav {
   z-index: 1000; 
 } 
 
-nav a, .vinyl-card a, .dropdown a, .dropdown-sub a, .dropdown-content a, .dropdown-sub-content a, .logo, a:hover{
+nav a, .dropdown a, .dropdown-sub a, .dropdown-content a, .dropdown-sub-content a, a:hover{
   cursor: url("/img/creepy-eyes-custom-cursor-ticika.png") 16 16, pointer;
 }
 
@@ -130,11 +142,6 @@ nav a, .vinyl-card a, .dropdown a, .dropdown-sub a, .dropdown-content a, .dropdo
   align-items: center;
 }
 
-.dropdown:hover .dropdown-content,
-.dropdown-sub:hover .dropdown-sub-content {
-  opacity: 1;
-  transform: translateY(0);
-}
 .dropdown > a i,
 .dropdown-sub > a i {
   margin-left: 5px;
@@ -173,96 +180,10 @@ nav a, .vinyl-card a, .dropdown a, .dropdown-sub a, .dropdown-content a, .dropdo
   font-family: 'bookhand', sans-serif;
 }
 
-.navigation > a:hover {
-  animation: flicker 1s infinite alternate;
-  transform:translateY(-2px);
-  transition: transform 0.3s ease;
-  cursor: url("/img/creepy-eyes-custom-cursor-ticika.png") 16 16, pointer;
-}
-
-
-@keyframes flicker {
-  from {
-    text-shadow: 0 0 30px #900, 0 0 40px #900;
-    color:#955959;
-;
-  }
-  to {
-    text-shadow: 0 0 50px #f00, 0 0 70px #600;
-    color: rgb(131, 19, 19);
-  }
-}
-
-.dropdown > a:hover {
-  animation: flicker 1s infinite alternate;
-  transform:translateY(-2px);
-  transition: transform 0.3s ease;
-  cursor: url("/img/creepy-eyes-custom-cursor-ticika.png") 16 16, pointer;
-}
-
-@keyframes flicker {
-  from {
-    text-shadow: 0 0 30px #900, 0 0 40px #900;
-    color: #955959;
-  }
-  to {
-    text-shadow: 0 0 50px #f00, 0 0 70px #600;
-    color: rgb(131, 19, 19);
-  }
-}
-
-.dropdown-sub-content > a:hover {
-  animation: flicker 1s infinite alternate;
-  cursor: url("/img/creepy-eyes-custom-cursor-ticika.png") 16 16, pointer;
-}
-
-@keyframes flicker {
-  from {
-    text-shadow: 0 0 30px #900, 0 0 40px #900;
-    color: #955959;
-  }
-  to {
-    text-shadow: 0 0 50px #f00, 0 0 70px #600;
-    color: rgb(131, 19, 19);
-  }
-}
-
-.dropdown-sub > a:hover {
-  animation: flicker 1s infinite alternate;
-  cursor: url("/img/creepy-eyes-custom-cursor-ticika.png") 16 16, pointer;
-}
-
-@keyframes flicker {
-  from {
-    text-shadow: 0 0 30px #900, 0 0 40px #900;
-    color: #955959;
-  }
-  to {
-    text-shadow: 0 0 50px #f00, 0 0 70px #600;
-    color: rgb(131, 19, 19);
-  }
-}
-
-.dropdown-content> a:hover{
-  animation: flicker 1s infinite alternate;
-  cursor: url("/img/creepy-eyes-custom-cursor-ticika.png") 16 16, pointer;
-}
-
-@keyframes flicker{
-  from{
-    text-shadow: 0 0 30px #900, 0 0 40px #900;
-    color: #955959;
-  }
-  to {
-    text-shadow: 0 0 50px #f00, 0 0 70px #600;
-    color: rgb(131, 19, 19);
-  }
-}
-
 .dropdown-sub > a,
 .dropdown-content a,
 .dropdown-sub-content a {
-  font-family: 'burton', sans-serif;
+  font-family: 'halloween', sans-serif;
   font-size: 20px;
 }
 
@@ -289,265 +210,14 @@ nav a, .vinyl-card a, .dropdown a, .dropdown-sub a, .dropdown-content a, .dropdo
   box-shadow: 0 8px 25px rgba(255,0,0,0.4); 
 }
 
-
-main .vinyl-section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 20px 200px 100px;
-  justify-content: center;
-  background: #170a0a;
-  gap: 50px;
-}
-
-main .section-title{
-  display: flex;
-  font-size: 25px;
-  justify-self: center;
-  position:relative;
-  font-family:'bookhand', sans-serif;
-  font-weight: lighter;
-  color:#955959;
-  text-shadow: 0 0 50px rgb(114, 44, 44), 0 0 70px #600;
-
-} 
-
-.slider-track {
-  display: flex;
-  gap: 300px;
-}
-
-.vinyl-card {
-  background-color: #270b0b;
-  display: inline-block;
-  width: 350px; 
-  text-align: center;
-  cursor: pointer;
-  margin-right: 20px;
-  border-radius: 5%;
+ nav a:hover{
+  transform:translateY(-2px);
   transition: transform 0.3s ease;
+  animation: flicker-hover 1.5s infinite alternate;
 }
 
-.vinyl-card:hover {
-  transform: translateY(-15px); 
-  box-shadow: 0 0 20px rgb(114, 44, 44), 0 0 40px #600;
-  background-color: #270f0f;
-  cursor: url("/img/creepy-eyes-custom-cursor-ticika.png") 16 16, pointer;
-}
-
-.vinyl-img {
-  position: relative;
-  width: 300px;
-  height: 300px;
-}
-
-.vinyl-img img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px; 
-  transition: opacity 0.5s ease;
-  display: block; 
-}
-
-.vinyl-section .coming-home{
-  position: relative;
-  margin-top: 30px;
-  margin-left: 30px;
-}
-
-.vinyl-section .dp-madeinjp{
-  position: absolute;
-  margin-left: 20px;
-  margin-top: 10px;
-}
-
-.vinyl-img .draconian{
-  position:relative;
-  height: auto;
-  top: 50px;
-  margin-left: 25px;
-}
-
-.vinyl-img .painkiller{
-  position:relative;
-  height: auto;
-  margin-left: 30px;
-}
-
-.vinyl-img .shamrain{
-  position:absolute;
-  height: auto;
-  top: 50px;
-  left: 30px;
-}
-
-.vinyl-img .acdc{
-  position:relative;
-  height: auto;
-  top: 50px;
-  left: 20px;
-}
-
-.vinyl-section .stickyfingers{
-  position:absolute;
-  width: 360px;
-  height: auto;
-  margin-top: -50px;
-}
-
-.vinyl-section .gotliveifyouwant{
-  position:absolute;
-  width: 490px;
-  height: auto;
-  margin-top: -80px;
-  margin-left: -70px;
-}
-
-.vinyl-section .anthology{
-  position:absolute;
-  width: 400px;
-  height: auto;
-  margin-top: -40px;
-  margin-left: -35px;
-}
-.vinyl-section .flickoftheswitch{
- position:absolute;
-  width: 400px;
-  height: auto;
-  margin-top: -50px;
-  margin-left: -35px;
-}
-
-.vinyl-section .theclash{
-  position:absolute;
-  width: 250px;
-  height: auto;
-  margin-top: 25px;
-  margin-left: 50px;
-}
-
-.vinyl-section .gunsnroses{
-  position: absolute;
-  margin-left: 5px;
-  width: 350px;
-  height: auto;
-  top: -10px;
-}
-
-.vinyl-section .revenge{
-  position: absolute;
-  margin-left: 5px;
-  width: 350px;
-  height: auto;
-  top: -10px;
-}
-
-.vinyl-section .pinkfloyd{
-  position: absolute;
-  margin-left: 5px;
-  width: 350px;
-  height: auto;
-  top: -10px;
-}
-
-.vinyl-section .trs{
-  position: absolute;
-  margin-left: 5px;
-  width: 350px;
-  height: auto;
-  top: -10px;
-}
-
-/* hardrock html */
-
-
-
-/*-----------------*/
-
-.album-name {
-  font-family: 'burton', sans-serif;
-  font-size: 22px; 
-  margin: 15px 0 0 0;
-  color: #f3f3f3;
-}
-
-.artist-name {
-  font-size: 18px; 
-  color: #c7a9a9;
-  margin: 6px 0;
-}
-
-.price {
-  font-size: 18px; 
-  color: rgb(124, 23, 23);
-  text-shadow: 0 0 12px rgba(255, 0, 0, 0.427), 0 0 35px rgba(173, 59, 59, 0.647);
-  margin-top: 6px;
-}
-
-.vinyl-section {
-  scroll-behavior: smooth;
-}
-
-.vinyl-section.dragging {
-  cursor: grabbing;
-  cursor: -webkit-grabbing;
-}
-
-
-footer{
-  display: flex;
-  justify-content: center;
-  color: #c7a9a9;
-  background-color: #0800008c;
-  font-family: 'burton', sans-serif;
-}
-
-.feedback{
-  display: flex;
-  justify-content:center;
-  flex-direction: column;
-  gap: 10px;
-  text-align: center;
-  padding: 20px 50px 20px;
-  border-radius: 5px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.feedback input{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 5px 5px 15px;
-  margin: 10px 100px 10px;
-  color: lightcoral;
-  max-width: 200px;
-  text-align: center;
-  background-color: rgb(43, 8, 8);
-  border: none;
-  font-family: 'bookhand', sans-serif;
-  cursor: pointer;
-  cursor: url("/img/creepy-eyes-custom-cursor-ticika.png") 16 16, pointer;
-
-}
-
-.feedback input:focus{
-    border: solid 1px;
-    border-color: #e50914;
-    background: #330202;
-    outline: none;
-}
-
-.feedback input[type='submit']:hover {
-  color:rgb(134, 68, 68);
-  background-color: #470b0b;
-  cursor: url("/img/creepy-eyes-custom-cursor-ticika.png") 16 16, pointer;
-}
-
-.footer-text, .merchandising-title, .section-title{
-animation: flicker-static 1.5s infinite alternate;
-}
-@keyframes flicker-static{
-  from{
+@keyframes flicker-hover {
+    from{
    text-shadow: 0 0 50px rgb(172, 78, 78), 0 0 70px rgb(215, 89, 89);
    color:#cb6b6b
   }
@@ -555,4 +225,254 @@ animation: flicker-static 1.5s infinite alternate;
     text-shadow: 0 0 50px rgb(133, 37, 37), 0 0 70px rgb(154, 83, 83);
     color:#814444;
   }
+}
+
+/* VINYL SECTION */
+main .vinyl-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 40px 60px;
+    justify-items: center;
+}
+
+.vinyl-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    min-height: 450px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'dark', sans-serif;
+    border-radius: 5%;
+    transition: transform 0.3s ease;
+    background-color: #34000062;
+    overflow: hidden;
+    cursor: url("/img/creepy-eyes-custom-cursor-ticika.png") 16 16, pointer;
+}
+
+.vinyl-card a {
+    text-decoration: none;
+}
+
+.vinyl-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 0 25px rgb(114, 44, 44), 0 0 50px #600;
+}
+
+.vinyl-card img {
+    width: 300px;      
+    height: auto;     
+    border-radius: 10px;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.vinyl-card:hover img {
+    transform: scale(1.05);
+}
+
+.album-name {
+    font-family: 'dark', sans-serif;
+    font-size: 25px;
+    color: #ffffff;
+    margin-top: auto;
+    text-align: center;
+}
+
+.artist-name {
+    font-size: 18px;
+    color: #c7a9a9;
+    margin: 6px 0;
+}
+
+.price {
+    font-size: 24px;
+    color: rgb(172, 84, 84);
+    text-shadow: 0 0 12px rgba(255, 0, 0, 0.427), 0 0 35px rgba(173, 59, 59, 0.647);
+    margin-top: 6px;
+}
+
+.vinyl-card .acdc{
+  position:absolute;
+  width: 340px;
+  margin-left: -180px;
+  margin-top: 10px;
+}
+
+.vinyl-card .draconian {
+  position:absolute;
+  width: 340px;
+  margin-left: -174px;
+  margin-top: 10px;
+}
+
+.vinyl-card .gotliveifyouwant{
+  position:absolute;
+  width: 480px;
+  margin-left: -250px;
+  margin-top: -50px;
+}
+
+.vinyl-card .cursed{
+  position:absolute;
+  width: 380px;
+  margin-left: -200px;
+  margin-top: -10px;
+}
+
+.vinyl-card .stickyfingers{
+  position:absolute;
+  width: 340px;
+  margin-left: -170px;
+  margin-top: -10px;
+}
+
+.vinyl-card .Iwanttoholdyourhand{
+  position:absolute;
+  width: 440px;
+  margin-left: -220px;
+  margin-top: -30px;
+}
+
+.vinyl-card .blackandblue{
+  position:absolute;
+  width: 400px;
+  margin-left: -200px;
+  margin-top: -40px;
+}
+
+.vinyl-card .beatles{
+  position:absolute;
+  width: 350px;
+  margin-left: -180px;
+  margin-top: -10px;
+}
+
+.vinyl-card .backinblack{
+  position:absolute;
+  width: 360px;
+  margin-left: -190px;
+  margin-top: -15px;
+}
+
+.vinyl-card .highwaytohell{
+  position:absolute;
+  width: 360px;
+  margin-left: -190px;
+  margin-top: -15px;
+}
+
+.vinyl-card .flickoftheswitch{
+  position:absolute;
+  width: 380px;
+  margin-left: -190px;
+  margin-top: -50px;
+}
+
+.vinyl-card .theclash{
+  position:absolute;
+  width: 260px;
+  margin-left: -130px;
+  margin-top: 20px;
+}
+
+.vinyl-card .shamrain{
+  position:absolute;
+  width: 320px;
+  margin-left: -160px;
+  margin-top: 50px;
+}
+
+.vinyl-card .revenge {
+  position:absolute;
+  width: 380px;
+  margin-left: -180px;
+  margin-top: -15px;
+}
+
+/* FOOTER */
+.site-footer {
+    background: linear-gradient(180deg, #150404, #2b0707, #150404);
+    padding: 50px 30px;
+    color: #e8c7c7;
+    font-family: "Times New Roman", serif;
+    border-top: 1px solid #3c0f0f;
+    box-shadow: 0 -10px 25px #000000aa inset;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-column {
+    text-align: center;
+    min-width: 260px;
+}
+
+.footer-title {
+    font-size: 24px;
+    margin-bottom: 18px;
+    color: #f3dede;
+    text-shadow: 0 0 10px #751c1c, 0 0 18px #3c0808;
+}
+
+.footer-form input {
+    width: 85%;
+    padding: 12px;
+    background: #1e0606;
+    border: 1px solid #4e0e0e;
+    color: #eedada;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    transition: 0.3s ease;
+}
+
+.footer-form input:focus {
+    outline: none;
+    border-color: #7a1f1f;
+    box-shadow: 0 0 10px #7a1f1f;
+}
+
+.footer-form button {
+    padding: 10px 25px;
+    background: #4e0e0e;
+    border: none;
+    color: #f5dada;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: inherit;
+}
+
+.footer-form button:hover {
+    background: #6b1515;
+    box-shadow: 0 0 12px #7a1f1f;
+}
+
+.footer-socials i {
+    font-size: 30px;
+    margin: 0 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: #e8c7c7;
+}
+
+.footer-socials i:hover {
+    color: #ff6a6a;
+    text-shadow: 0 0 14px #7a1f1f;
+}
+
+.footer-bottom {
+    margin-top: 45px;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.75;
+    color: #c9a3a3;
+    letter-spacing: 0.5px;
 }

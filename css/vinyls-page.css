@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'bookhand';
     src: url(/fonts/elementary_gothic_bookhand/Elementary_Gothic_Bookhand.ttf) format('truetype');
@@ -7,23 +6,30 @@
 }
 
 @font-face {
-    font-family: 'burton';
-    src: url(/fonts/burtons_nightmare/NITEMARE.TTF) format('truetype');
+    font-family: 'octobercrow';
+    src: url(/fonts/Octobercrow.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-  font-family: 'pieces';
-  src: url(/fonts/pieces_of_eight/Pieces\ of\ Eight.ttf) format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'halloween';
+    src: url(/fonts/hallowen/HallowenInline.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-  body {
+@font-face {
+    font-family: 'twistedhalloween';
+    src: url(/fonts/twisted_halloween/TwistedHalloween_PERSONAL_USE_ONLY.otf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
     margin: 0;
-    background-color: #170a0a;
-    scroll-behavior: smooth;
+    background-image: url("/img/bg.jpg");
+    background-repeat: no-repeat;
     cursor: url("/img/creepy-eyes-custom-cursor.png") 16 16, auto;
   }
 
