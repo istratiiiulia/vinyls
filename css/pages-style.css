@@ -265,11 +265,6 @@ main .vinyl-section {
     height: auto;     
     border-radius: 10px;
     object-position: center;
-    transition: transform 0.3s ease;
-}
-
-.vinyl-card:hover img {
-    transform: scale(1.05);
 }
 
 .album-name {

@@ -239,6 +239,7 @@ nav a, .dropdown a, .dropdown-sub a, .dropdown-content a, .dropdown-sub-content 
 .vinyl-card {
     display: flex;
     flex-direction: column;
+    position: relative;
     min-width: 320px;
     min-height: 450px;
     align-items: center;
@@ -265,12 +266,8 @@ nav a, .dropdown a, .dropdown-sub a, .dropdown-content a, .dropdown-sub-content 
     height: auto;     
     border-radius: 10px;
     object-position: center;
-    transition: transform 0.3s ease;
 }
 
-.vinyl-card:hover img {
-    transform: scale(1.05);
-}
 
 .album-name {
     font-family: 'dark', sans-serif;
@@ -292,65 +289,6 @@ nav a, .dropdown a, .dropdown-sub a, .dropdown-content a, .dropdown-sub-content 
     text-shadow: 0 0 12px rgba(255, 0, 0, 0.427), 0 0 35px rgba(173, 59, 59, 0.647);
     margin-top: 6px;
 }
-
-.vinyl-img .electricsix{
-  position: absolute;
-  width: 290px;
-  height: auto;
-  margin-left: -145px;
-}
-
-.vinyl-img .afd {
-  position: absolute;
-  width: 410px;
-  height: auto;
-  margin-top: -55px;
-  margin-left: -200px;
-}
-
-.vinyl-img .lgw{
-  position: absolute;
-  width: 300px;
-  height: auto;
-  margin-top: 50px;
-  margin-left: -145px;
-}
-
-.vinyl-img .reload{
-  position: absolute;
-  width: 390px;
-  height: auto;
-  margin-top: -25px;
-  margin-left: -220px;
-}
-
-.vinyl-img .ledzeppelin{
-  position: absolute;
-  width: 290px;
-  height: auto;
-  margin-left: -145px;
-}
-
-.vinyl-img .kissalive{
-  position: absolute;
-  width: 570px;
-  height: auto;
-  margin-top: -120px;
-  margin-left: -275px;
-  
-}
-
-.vinyl-img .defleppard{
-  position: absolute;
-  width: 360px;
-  height: auto;
-  margin-top: -26px;
-  margin-left: -180px;
-}
-
-
-/*ALTERNATIVE ROCK SECTION*/
-
 
 
 .site-footer {
