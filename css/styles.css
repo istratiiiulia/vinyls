@@ -54,7 +54,7 @@ nav a, .dropdown a, .dropdown-sub a, .dropdown-content a, .dropdown-sub-content 
 }
 
 .logo img {
-  height: 350px; 
+  height: 300px; 
   width: auto;
 }
 
@@ -299,7 +299,6 @@ nav a:hover{
   margin-top: 6px;
 }
 
-
 .vinyl-section::-webkit-scrollbar {
   height: 15px;
 }
@@ -325,12 +324,10 @@ nav a:hover{
   scroll-behavior: smooth;
 }
 
-
 .vinyl-section.dragging {
   cursor: grabbing;
   cursor: -webkit-grabbing;
 }
-
 
 main .merch-clothes {
   display: grid;
@@ -429,7 +426,6 @@ body.dragging {
   cursor: -webkit-grabbing;
 }
 
-
 .site-footer {
     background: linear-gradient(180deg, #150404, #2b0707, #150404);
     padding: 50px 30px;
@@ -515,3 +511,165 @@ body.dragging {
     letter-spacing: 0.5px;
 }
 
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 34px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.burger span {
+  height: 3px;
+  background: #955959;
+  border-radius: 2px;
+  box-shadow: 0 0 10px #7a1f1f;
+  transition: 0.3s;
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+html, body {
+  overflow-x:hidden;
+}
+
+@media (max-width: 768px) {
+.navigation {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh;
+  background: rgba(10,0,0,0.95);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  overflow-y: auto; 
+  z-index: 9999;
+}
+  .navigation.active {
+    display: flex;
+  }
+  .burger {
+    display: flex;
+    position: relative;
+    z-index: 10000; 
+  }
+  .navigation a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+  .logo img {
+    height: 350px;
+  }
+
+@media (min-width: 769px) {
+  .burger {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .dropdown:hover .dropdown-content,
+  .dropdown-sub:hover .dropdown-sub-content,
+  .dropdown:hover > a i,
+  .dropdown-sub:hover > a i {
+    transform: none;
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  .dropdown > a,
+  .dropdown-sub > a {
+    color: #fff;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .dropdown > a i,
+  .dropdown-sub > a i {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+  }
+
+  .dropdown.open > a,
+  .dropdown-sub.open > a {
+    color: #955959;
+  }
+
+  .dropdown.open > a i,
+  .dropdown-sub.open > a i {
+    transform: rotate(90deg);
+  }
+
+  .dropdown-content,
+  .dropdown-sub-content {
+    display: none;
+    flex-direction: column;
+    pointer-events: auto;
+  }
+
+  .dropdown.open > .dropdown-content,
+  .dropdown-sub.open > .dropdown-sub-content {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+
+  .merch-clothes {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    gap: 20px !important;
+    padding-left: 20px !important;   
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .merch-clothes::before {
+    content: "";
+    flex: 0 0 40px; 
+  }
+
+  .merch-clothes .merch-card {
+    flex: 0 0 auto !important;
+    width: 250px !important;
+    margin: 0 !important;
+  }
+
+  .merch-card .merch-img img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+}
+
+  .merch-clothes::-webkit-scrollbar {
+    height: 10px;
+    background: transparent;
+  }
+
+  .merch-clothes::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #470b0b, #430202);
+    border-radius: 6px;
+  }
+
+  .merch-clothes::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(90deg, #3e0202, #620505);
+  }
