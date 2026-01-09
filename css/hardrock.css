@@ -28,8 +28,12 @@
 
 body {
     margin: 0;
+    background-color: #080000;
     background-image: url("/img/bg.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
     cursor: url("/img/creepy-eyes-custom-cursor.png") 16 16, auto;
   }
 
