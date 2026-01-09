@@ -575,7 +575,7 @@ html, body {
   }
 }
   .logo img {
-    height: 350px;
+    height: 150px;
   }
 
 @media (min-width: 769px) {
