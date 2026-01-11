@@ -175,7 +175,70 @@ nav a, .dropdown a, .dropdown-sub a, .dropdown-content a, .dropdown-sub-content 
   cursor: url("/img/creepy-eyes-custom-cursor-ticika.png") 16 16, pointer;
 }
 
-.dropdown > a,
+.modal {  
+  display: none; 
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  font-family: 'bookhand', sans-serif;
+  background: #1a0a0a;
+  border: 2px solid #955959;
+  padding: 20px;
+  border-radius: 12px;
+  color: #653434;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 0 20px #7a1f1f;
+}
+
+.modal-content input {
+  font-family: 'bookhand', sans-serif;
+  width: 100%;
+  padding: 10px;
+  margin: 10px -10px;
+  border-radius: 6px;
+  border: 1px solid #955959;
+  background: #1a0a0a;
+  color: #fff;
+  outline: none;
+  box-shadow: 0 0 10px #7a1f1f inset;
+  font-size: 10px;
+  transition: 0.3s;
+}
+
+.modal-content button[type="submit"] {
+  font-family: 'bookhand', sans-serif;
+  font-size: 10px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #502929;
+  color: #a03a3a;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 15px #7a1f1f;
+  transition: 0.3s;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 24px;
+  color: #955959;
+  font-weight: bold;
+}
+
+.dropdown > a, 
 .navigation > a {
   font-family: 'bookhand', sans-serif;
 }
