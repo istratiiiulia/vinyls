@@ -1,6 +1,8 @@
 {
-    "rewrites": [
-        {"source": "/(.*)", "destination": "/html/index.html"},
-        {"source":"/(.*)", "destination":"/html/$1"}
-]
+  "rewrites": [
+    {
+      "source": "/((?!clothes|css|js|fonts).*)",
+      "destination": "/html/index.html"
+    }
+  ]
 }
