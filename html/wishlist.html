@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wishlist</title>
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="/img/logo.site.png">
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="nav-container">
+
+      <div class="logo">
+        <img src="/img/logo.png" alt="L'échappée Logo">
+      </div>
+
+      <div class="navigation">
+        <a href="/html/new-release.html">New release</a>
+
+        <div class="dropdown">
+          <a href="#">Genre <i class="fa-solid fa-chevron-right"></i></a>
+          <div class="dropdown-content">
+
+            <div class="dropdown-sub">
+              <a href="#">Rock <i class="fa-solid fa-chevron-right"></i></a>
+              <div class="dropdown-sub-content">
+                <a href="/html/rocknroll.html">Rock and roll</a>
+                <a href="/html/hardrock.html">Hard rock</a>
+                <a href="/html/alternativerock.html">Alternative rock</a>
+                <a href="/html/progressiverock.html">Progressive rock</a>
+              </div>
+            </div>
+
+            <div class="dropdown-sub">
+              <a href="#">Metal <i class="fa-solid fa-chevron-right"></i></a>
+              <div class="dropdown-sub-content">
+                <a href="/html/heavymetal.html">Heavy metal</a>
+                <a href="/html/progressivemetal.html">Progressive metal</a>
+                <a href="/html/blackmetal.html">Black metal</a>
+                <a href="/html/gothicmetal.html">Gothic metal</a>
+                <a href="/html/doommetal.html">Doom metal</a>
+                <a href="/html/numetal.html">Nu metal</a>
+              </div>
+            </div>
+            <div class="dropdown-sub">
+              <a href="#">Gothic <i class="fa-solid fa-chevron-right"></i></a>
+              <div class="dropdown-sub-content">
+                <a href="/html/darkwave.html">Darkwave</a>
+                <a href="/html/industrialgothic.html">Industrial Gothic</a>
+                <a href="/html/postpunk.html">Post-punk</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#">Equipment <i class="fa-solid fa-chevron-right"></i></a>
+          <div class="dropdown-content">
+            <a href="/html/needles.html">Needles</a>
+            <a href="/html/sleeves&protection.html">Sleeves & Protection</a>
+            <a href="/html/Vinylplayers.html">Vinyl players</a>
+          </div>
+        </div>
+        <a href="/html/wishlist.html">Wishlist</a>
+        <div class="login-btn">
+          <button>
+            <i class="fa-sharp fa-solid fa-skull"></i>
+            Log in
+            <i class="fa-sharp fa-solid fa-skull"></i>
+          </button>
+        </div>
+      </div>
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Login</h2>
+    <form>
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Log In</button>
+    </form>
+  </div>
+</div>
+
+<main>
+  <span class="section-title">Your Wishlist</span>
+  <section class="vinyl-section" style="padding:60px 20px; display:flex; justify-content:center;">
+    <div style="text-align:center; color:#c48b8b; font-family:'bookhand', sans-serif; max-width:720px;">
+      <h3>Your wishlist is empty</h3>
+      <p>Browse the store and add vinyls to your wishlist.</p>
+      <p style="margin-top:10px;">
+        <a href="/html/new-release.html" style="color:#955959;">See new releases</a>
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3 class="footer-title">Stay Updated</h3>
+      <form class="footer-form">
+        <input type="email" placeholder="your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <div class="footer-column">
+      <h3 class="footer-title">Follow us</h3>
+      <div class="footer-socials">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+      </div>
+    </div>
+  </div>
+  <p class="footer-bottom">©2026 L'échappée — All Rights Reserved</p>
+</footer>
+<script src="/js/hamburger.js"></script>
+<script src="/js/loginModal.js"></script>
+</body>
+</html>

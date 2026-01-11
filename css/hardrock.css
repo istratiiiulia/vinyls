@@ -443,3 +443,15 @@ nav a, .dropdown a, .dropdown-sub a, .dropdown-content a, .dropdown-sub-content 
     letter-spacing: 0.5px;
 }
 
+/* vinyl player section */
+.vinyl-card .rega-planar3 {
+    position:absolute;
+    top:50px;
+    right: 10px;
+}
+
+.vinyl-card .uturn-orbit {
+    position:absolute;
+    top:50px;
+    right: 10px;
+}
