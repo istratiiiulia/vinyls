@@ -315,20 +315,18 @@ main .vinyl-section {
     cursor: url("/img/creepy-eyes-custom-cursor-ticika.png") 16 16, pointer;
 }
 
-.vinyl-card a {
-    text-decoration: none;
-}
-
 .vinyl-card:hover {
     transform: translateY(-15px);
     box-shadow: 0 0 25px rgb(114, 44, 44), 0 0 50px #600;
 }
 
 .vinyl-card img {
-    width: 300px;      
-    height: auto;     
-    border-radius: 10px;
-    object-position: center;
+  position: static; 
+  display: block;
+  width: 80%;         
+  max-width: 300px; 
+  height: auto;
+  margin: 10px auto; 
 }
 
 .album-name {
@@ -352,103 +350,6 @@ main .vinyl-section {
     margin-top: 6px;
 }
 
-.vinyl-card .acdc{
-  position:absolute;
-  width: 340px;
-  margin-left: -180px;
-  margin-top: 10px;
-}
-
-.vinyl-card .draconian {
-  position:absolute;
-  width: 340px;
-  margin-left: -174px;
-  margin-top: 10px;
-}
-
-.vinyl-card .gotliveifyouwant{
-  position:absolute;
-  width: 480px;
-  margin-left: -250px;
-  margin-top: -50px;
-}
-
-.vinyl-card .cursed{
-  position:absolute;
-  width: 380px;
-  margin-left: -200px;
-  margin-top: -10px;
-}
-
-.vinyl-card .stickyfingers{
-  position:absolute;
-  width: 340px;
-  margin-left: -170px;
-  margin-top: -10px;
-}
-
-.vinyl-card .Iwanttoholdyourhand{
-  position:absolute;
-  width: 440px;
-  margin-left: -220px;
-  margin-top: -30px;
-}
-
-.vinyl-card .blackandblue{
-  position:absolute;
-  width: 400px;
-  margin-left: -200px;
-  margin-top: -40px;
-}
-
-.vinyl-card .beatles{
-  position:absolute;
-  width: 350px;
-  margin-left: -180px;
-  margin-top: -10px;
-}
-
-.vinyl-card .backinblack{
-  position:absolute;
-  width: 360px;
-  margin-left: -190px;
-  margin-top: -15px;
-}
-
-.vinyl-card .highwaytohell{
-  position:absolute;
-  width: 360px;
-  margin-left: -190px;
-  margin-top: -15px;
-}
-
-.vinyl-card .flickoftheswitch{
-  position:absolute;
-  width: 380px;
-  margin-left: -190px;
-  margin-top: -50px;
-}
-
-.vinyl-card .theclash{
-  position:absolute;
-  width: 260px;
-  margin-left: -130px;
-  margin-top: 20px;
-}
-
-.vinyl-card .shamrain{
-  position:absolute;
-  width: 320px;
-  margin-left: -160px;
-  margin-top: 50px;
-}
-
-.vinyl-card .revenge {
-  position:absolute;
-  width: 380px;
-  margin-left: -180px;
-  margin-top: -15px;
-}
 
 /* FOOTER */
 .site-footer {

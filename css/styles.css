@@ -645,10 +645,11 @@ html, body {
     text-decoration: none;
   }
 }
+@media (max-width: 768px) {
   .logo img {
     height: 150px;
   }
-
+}
 @media (min-width: 769px) {
   .burger {
     display: none;
