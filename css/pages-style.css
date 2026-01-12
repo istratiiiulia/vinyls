@@ -681,3 +681,7 @@ main .vinyl-section {
     position: relative !important;
   }
 }
+
+.vinyl-link{
+  text-decoration: none;
+}
